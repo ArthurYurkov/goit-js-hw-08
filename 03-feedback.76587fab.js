@@ -1,2 +1,0 @@
-const e=document.querySelector(".feedback-form");e.addEventListener("input",trottle((({target:e})=>{const t=e.name,o=e.value,a=localStorageApi.load("feedback-form-state")||{};a[t]=o,console.log(t,o),localStorageApi.save("feedback-form-state",a)}),500)),e.addEventListener("submit",(e=>{e.preventDefault(),e.target.reset(),localStorageApi.remove("feedback-form-state")})),(e=>{const{elements:t}=e,o=localStorageApi.load("feedback-form-state");if(!o)return;const a=Object.keys(o);for(const e of a)t[e].value=o[e]})(e);
-//# sourceMappingURL=03-feedback.76587fab.js.map
