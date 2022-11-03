@@ -8,7 +8,7 @@ const CONTACT_KEY = 'feedback-form-state';
 
 const contactField = form => {
   const { elements: contactFormEl } = form;
-  const dataForm = ocalStorageApi.load(CONTACT_KEY);
+  const dataForm = localStorageApi.load(CONTACT_KEY);
 
   if (!dataForm) {
     return;
