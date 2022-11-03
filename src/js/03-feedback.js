@@ -1,3 +1,7 @@
+'use strict';
+import throttle from 'lodash.throttle';
+import localStorageApi from './storage';
+
 const emailValue = document.querySelector('.feedback-form');
 
 const CONTACT_KEY = 'feedback-form-state';
