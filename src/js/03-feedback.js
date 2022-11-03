@@ -21,10 +21,11 @@ const contactField = form => {
   }
 };
 
+let formData = {};
 const emailForm = ({ target }) => {
   const formName = target.name;
   const formValue = target.value;
-  const formData = localStorageApi.load(CONTACT_KEY) || {};
+  formData = localStorageApi.load(CONTACT_KEY) || {};
 
   formData[formName] = formValue;
 
@@ -36,6 +37,8 @@ const formSubmit = event => {
   event.preventDefault();
   event.target.reset();
   localStorageApi.remove(CONTACT_KEY);
+
+  console.log(formData);
 };
 
 emailValue.addEventListener('input', throttle(emailForm, 500));
