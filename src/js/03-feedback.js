@@ -38,6 +38,6 @@ const formSubmit = event => {
   localStorageApi.remove(CONTACT_KEY);
 };
 
-emailValue.addEventListener('input', trottle(emailForm, 500));
+emailValue.addEventListener('input', throttle(emailForm, 500));
 emailValue.addEventListener('submit', formSubmit);
 contactField(emailValue);
